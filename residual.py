@@ -143,7 +143,6 @@ class Residual:
                 u.append(xn)
         return self.sum_multiple(u, self.base)
 
-    # Kind of a dirty hack, but not sure how to implement comparison with native RNS
     def __lt__(self, other):
         if isinstance(other, Residual):
             return self.comparer(self, other) == "<"
